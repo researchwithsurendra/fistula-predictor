@@ -31,3 +31,5 @@ if st.button("Predict Closure"):
     st.subheader("Result:")
     st.success(f"Predicted Closure: {'Yes' if pred == 1 else 'No'}")
     st.info(f"Probability of Closure: {prob:.2%}")
+
+Copyright of Dr. Surendra Shah
