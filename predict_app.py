@@ -7,7 +7,7 @@ model = joblib.load('fistula_closure_model.pkl')
 
 st.title("Fistula Closure Predictor")
 st.write("Enter new patient details to predict fistula closure outcome")
-st.write("Prediction if for DLPS/DLPF/LIFT with FiLaC")
+st.write("Prediction is for DLPS/DLPF/LIFT with FiLaC")
 
 # Form inputs
 grade = st.selectbox("Grade of Fistula (St. James classification of perianal fistulae)", [1, 2, 3, 4, 5])
@@ -33,4 +33,6 @@ if st.button("Predict Closure"):
     st.success(f"Predicted Closure: {'Yes' if pred == 1 else 'No'}")
     st.info(f"Probability of Closure: {prob:.2%}")
 
+
+st.write("This predictor model is created from a study in a single hospital. So prediction may vary in your setup")
 st.write("© 2025 Dr. Surendra Shah. All rights reserved.")
