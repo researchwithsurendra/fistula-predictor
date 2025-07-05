@@ -6,8 +6,9 @@ import joblib
 model = joblib.load('fistula_closure_model.pkl')
 
 st.title("Fistula Closure Predictor")
-st.write("Enter new patient details to predict fistula closure outcome")
 st.write("Prediction is for DLPS/DLPF/LIFT with FiLaC")
+
+st.write("Enter new patient details to predict fistula closure outcome")
 
 # Form inputs
 grade = st.selectbox("Grade of Fistula (St. James classification of perianal fistulae)", [1, 2, 3, 4, 5])
